@@ -1,0 +1,37 @@
+# [dbo].[Kullanici_Bilgi]
+
+USE [Stok3]
+GO
+
+/****** Object:  Table [dbo].[Kullanici_Bilgi]    Script Date: 4.05.2022 14:01:20 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Kullanici_Bilgi](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[kullanici_adi] [nvarchar](50) NULL,
+	[sifre] [nvarchar](50) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+ 
+# [dbo].[Malzemeler]
+
+/****** Object:  Table [dbo].[Malzemeler]    Script Date: 4.05.2022 14:01:20 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Malzemeler](
+	[MalzemeKodu] [nchar](10) NULL,
+	[MalzemeAdi] [nchar](20) NULL,
+	[YillikSatis] [nchar](10) NULL,
+	[BirimFiyat] [nchar](10) NULL,
+	[MinStok] [nchar](10) NULL,
+	[TSuresi] [nchar](10) NULL
+) ON [PRIMARY]
+GO
